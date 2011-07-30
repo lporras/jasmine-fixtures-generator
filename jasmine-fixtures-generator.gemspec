@@ -5,9 +5,9 @@ require "jasmine-fixtures-generator/version"
 Gem::Specification.new do |s|
   s.name        = "jasmine-fixtures-generator"
   s.version     = Jasmine::Fixtures::Generator::VERSION
-  s.authors     = ["Guillermo Iguaran"]
-  s.email       = ["guilleiguaran@gmail.com"]
-  s.homepage    = ""
+  s.authors     = ["Luis Porras", "Guillermo Iguaran"]
+  s.email       = ["lporras16@gmail.com", "guilleiguaran@gmail.com"]
+  s.homepage    = "https://github.com/lporras/jasmine-fixtures-generator"
   s.summary     = %q{TODO: Write a gem summary}
   s.description = %q{TODO: Write a gem description}
 
