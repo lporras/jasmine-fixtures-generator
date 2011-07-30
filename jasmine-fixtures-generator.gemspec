@@ -13,6 +13,9 @@ Gem::Specification.new do |s|
 
   s.rubyforge_project = "jasmine-fixtures-generator"
 
+  s.add_runtime_dependency "railties", ">= 3.0.0"
+  s.add_runtime_dependency "jasmine", ">= 1.0.0"
+
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
