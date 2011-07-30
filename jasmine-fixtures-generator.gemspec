@@ -1,6 +1,6 @@
 # -*- encoding: utf-8 -*-
 $:.push File.expand_path("../lib", __FILE__)
-require "jasmine-fixtures-generator/version"
+require "jasmine-fixtures-generator"
 
 Gem::Specification.new do |s|
   s.name        = "jasmine-fixtures-generator"
