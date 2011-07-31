@@ -1,6 +1,6 @@
 require "rails/generators/base"
 
-class JasmineFixturesGenerator < ::Rails::Generators::Base
+class JasmineFixturesGenerator < Rails::Generators::Base
 
   desc "This generator install jasmine-jquery and add fixture_helper_methods.rb"
   source_root File.expand_path('../templates', __FILE__)

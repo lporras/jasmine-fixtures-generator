@@ -1,5 +1,5 @@
 require "test_helper"
-require "generators/jasmine-fixtures"
+require "generators/jasmine_fixtures_generator"
 
 class JasmineFixturesGeneratorTest < Rails::Generators::TestCase
   tests JasmineFixturesGenerator
