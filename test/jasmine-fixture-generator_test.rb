@@ -9,6 +9,6 @@ class JasmineFixturesGeneratorTest < Rails::Generators::TestCase
   test "Assert all files are properly created" do
     run_generator
     assert_file "spec/support/jasmine_fixture_generator_methods.rb"
-    assert_file "spec/helpers/jasmine-jquery.js"
+    assert_file "spec/javascripts/helpers/jasmine-jquery.js"
   end
 end

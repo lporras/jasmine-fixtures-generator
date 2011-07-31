@@ -7,7 +7,7 @@ class JasmineFixturesGenerator < ::Rails::Generators::Base
 
   def copy_jasmine_jquery
     say_status("copying", "jasmine-jquery", :green)
-    copy_file "../../../../vendor/jasmine-jquery.js", "spec/javascripts/helpers/jasmine-jquery.js"
+    copy_file "../../../vendor/jasmine-jquery.js", "spec/javascripts/helpers/jasmine-jquery.js"
   end
 
   def copy_jasmine_fixture_generator_methods
