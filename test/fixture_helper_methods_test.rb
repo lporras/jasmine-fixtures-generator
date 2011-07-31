@@ -1,10 +1,13 @@
 require 'test_helper'
-require 'generators/templates/jasmine_fixture_generator_methods'
+require 'generators/templates/spec/support/fixture_helper_methods'
 
 class FixtureHelperMethodsTest < ActiveSupport::TestCase
   include FixtureHelperMethods
 
-  test "#save_fixture" do
-    save_fixture("<html><body><p>prueba</p></body></html>", "test_file")
+  test "#save_fixture creates an html file with the given name" do
+    save_fixture("<p>prueba</p>", "test_file.html")
+    fixture_path = File.join(Rails.root, '/spec/javascripts/fixtures')
+    fixture_file = File.join(fixture_path, "test_file.html")
+    assert_equal true, File.exists?(fixture_file)
   end
 end

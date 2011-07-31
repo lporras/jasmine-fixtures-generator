@@ -1,15 +1,15 @@
-# Add fixture-generation methods to ControllerExampleGroup. We load
-# this file within our spec_helper.rb
-
 module FixtureHelperMethods
-  # Saves the markup to a fixture file using the given name
-  def save_fixture(markup, name)
+  # Saves the content to a fixture file using the given name
+  def save_fixture(content, name)
     fixture_path = File.join(Rails.root, '/spec/javascripts/fixtures')
     FileUtils.mkdir_p(fixture_path) unless File.exists?(fixture_path)
 
-    fixture_file = File.join(fixture_path, "#{name}.html")
+    content = convert_body_tag_to_div(content)
+
+    fixture_file = File.join(fixture_path, "#{name}")
+
     File.open(fixture_file, 'w') do |file|
-      file.puts(markup)
+      file.puts(content)
     end
   end
 
@@ -23,6 +23,8 @@ module FixtureHelperMethods
 
     convert_body_tag_to_div(content)
   end
+
+  private
 
   # Recommended that you add all body-level third party scripts inside a div called #third-party-scripts
   # so that they can be removed during testing.
@@ -43,4 +45,6 @@ module FixtureHelperMethods
   end
 end
 
+# Add fixture-generation methods to ControllerExampleGroup. We load
+# this file within our spec_helper.rb
 RSpec::Rails::ControllerExampleGroup.extend(FixtureHelperMethods) if defined?(RSpec)
