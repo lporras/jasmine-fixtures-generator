@@ -1,8 +1,6 @@
 # Add fixture-generation methods to ControllerExampleGroup. We load
 # this file within our spec_helper.rb
 
-RSpec::Rails::ControllerExampleGroup.extend(FixtureHelperMethods)
-
 module FixtureHelperMethods
   # Saves the markup to a fixture file using the given name
   def save_fixture(markup, name)
@@ -44,3 +42,5 @@ module FixtureHelperMethods
     markup.gsub("<body", '<div').gsub("</body>", "</div>")
   end
 end
+
+RSpec::Rails::ControllerExampleGroup.extend(FixtureHelperMethods) if defined?(RSpec)
