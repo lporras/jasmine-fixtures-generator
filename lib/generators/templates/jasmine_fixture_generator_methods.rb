@@ -4,10 +4,8 @@
 module FixtureHelperMethods
   # Saves the markup to a fixture file using the given name
   def save_fixture(markup, name)
-    puts Rails
-    puts Rails.root
     fixture_path = File.join(Rails.root, '/spec/javascripts/fixtures')
-    Dir.mkdir(fixture_path) unless File.exists?(fixture_path)
+    FileUtils.mkdir_p(fixture_path) unless File.exists?(fixture_path)
 
     fixture_file = File.join(fixture_path, "#{name}.html")
     File.open(fixture_file, 'w') do |file|
