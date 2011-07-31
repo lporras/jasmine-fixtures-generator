@@ -1,6 +1,5 @@
 module Rails
-
-  def root
+  def self.root
     File.expand_path("../tmp", File.dirname(__FILE__))
   end
 end
