@@ -8,8 +8,8 @@ Gem::Specification.new do |s|
   s.authors     = ["Luis Porras", "Guillermo Iguaran"]
   s.email       = ["lporras16@gmail.com", "guilleiguaran@gmail.com"]
   s.homepage    = "https://github.com/lporras/jasmine-fixtures-generator"
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
+  s.summary     = %q{Fixtures Generator for Jasmine under Rails 3.x}
+  s.description = %q{Fixtures Generator for Jasmine BDD framework under Rails 3.x}
 
   s.rubyforge_project = "jasmine-fixtures-generator"
 
