@@ -47,4 +47,6 @@ end
 
 # Add fixture-generation methods to ControllerExampleGroup
 RSpec::Rails::ControllerExampleGroup.extend(FixtureHelperMethods) if defined?(RSpec)
-ActionController::TestCase.extend(FixtureHelperMethods) if defined?(ActionController::TestCase)
+ActionController::TestCase.send(:include, FixtureHelperMethods) if defined?(ActionController::TestCase)
+
+include FixtureHelperMethods

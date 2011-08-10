@@ -1,5 +1,5 @@
 # Jasmine Fixtures Generator [![Build Status](http://travis-ci.org/lporras/jasmine-fixtures-generator.png)](http://travis-ci.org/lporras/jasmine-fixtures-generator)
-Fixtures Generator for Jasmine under Rails 3.x (largelly based in [jasmine-fixtures](https://github.com/mavenlink/jasmine-fixtures) for Rails 2.x)
+Fixtures Generator for Jasmine under Rails 3.x using rspec_controller or funtionals tests (largelly based in [jasmine-fixtures](https://github.com/mavenlink/jasmine-fixtures) for Rails 2.x)
 
 
 ## Installation
@@ -15,7 +15,13 @@ Add it to your Gemfile:
 Add the require in spec_helper.rb
 
     require 'jasmine_fixtures'
-'
+
+or
+
+Add the require in test_helper.rb if you don't use rspec
+
+    require 'jasmine_fixtures'
+
 ## Usage
 
 Run the generator:

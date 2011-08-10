@@ -17,6 +17,8 @@ require 'spec_helper'
 Using save_fixture method
 -------------------------
 
+save_fixture('content', 'file_name.html') => will create a file called file_name.html on spec/javascripts/fixtures
+
 html_for('body') =>  will take only the content of <body> tag and will rename <body> to <div>
                      to avoid nested <body> tags within the Jasmine runner
 
@@ -27,6 +29,8 @@ you can subvert this and use response.body or whatever is appropriate.
 
 ####Examples
 
+#Rspec
+
 describe UsersController do
   #You need to render_views in each of your describes to get the content of the response
   render_views
@@ -36,7 +40,7 @@ describe UsersController do
     it "generates a new user signup page" do
       get :new
       response.should be_success
-      save_fixture(html_for('body'), 'user-signup-page')
+      save_fixture(html_for('body'), 'user-signup-page.html')
     end
 
     #Example of an ajax request that doesn't have a body tag to strip out
@@ -48,4 +52,23 @@ describe UsersController do
       end
     end
   end
+end
+
+#Funtionals
+
+class UsersControllerTest < ActionController::TestCase
+
+   #Example of a standard request that would use html_for to strip <body>
+   test "GET#new generates a new user signup page" do
+      get :new
+      assert_response :success
+      save_fixture(html_for('body'), 'user-signup-page')
+   end
+
+   #Example of an ajax request that doesn't have a body tag to strip out
+   test "ajax POST#create generates successful signup response" do
+      post :create, :user => { :name => 'Bob', :password => 'something', :password_confirmation => 'something' }, :format => :js
+      assert_response :success
+      save_fixture(response.body, 'user-success-ajax-response')
+   end
 end
