@@ -4,7 +4,7 @@ require 'spec_helper'
 
   You can use this file to define new Jasmine Fixtures
   or
-  You can add jasmine fixtures spec on your controllers spec
+  You can add jasmine fixtures spec on your controllers spec or functionals tests
 
   We have provided an example for you to crib off.
 

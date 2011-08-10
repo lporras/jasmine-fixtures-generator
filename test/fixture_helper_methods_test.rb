@@ -1,5 +1,5 @@
 require 'test_helper'
-require 'generators/templates/spec/support/fixture_helper_methods'
+require 'jasmine_fixtures'
 
 class FixtureHelperMethodsTest < ActiveSupport::TestCase
   include FixtureHelperMethods

@@ -45,6 +45,6 @@ module FixtureHelperMethods
   end
 end
 
-# Add fixture-generation methods to ControllerExampleGroup. We load
-# this file within our spec_helper.rb
+# Add fixture-generation methods to ControllerExampleGroup
 RSpec::Rails::ControllerExampleGroup.extend(FixtureHelperMethods) if defined?(RSpec)
+ActionController::TestCase.extend(FixtureHelperMethods) if defined?(ActionController::TestCase)
