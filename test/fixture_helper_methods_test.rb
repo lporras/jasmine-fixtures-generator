@@ -2,7 +2,6 @@ require 'test_helper'
 require 'jasmine_fixtures'
 
 class FixtureHelperMethodsTest < ActiveSupport::TestCase
-  include FixtureHelperMethods
 
   test "#save_fixture creates an html file with the given name" do
     save_fixture("<p>prueba</p>", "test_file.html")
