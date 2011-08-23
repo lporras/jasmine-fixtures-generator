@@ -1,10 +1,8 @@
-require 'jasmine/fixtures/task'
-
 module Jasmine
   module Fixtures
     class Railtie < Rails::Railtie
       rake_tasks do
-        Jasmine::Fixtures::Task.new
+        load "tasks/generate_js_fixture.rake"
       end
     end
   end
