@@ -10,17 +10,7 @@ Install the gem:
 
 Add it to your Gemfile:
 
-    gem "jasmine-fixtures-generator", :group => :development, :require => false
-
-Add the require in spec_helper.rb
-
-    require 'jasmine_fixtures'
-
-or
-
-Add the require in test_helper.rb if you don't use rspec
-
-    require 'jasmine_fixtures'
+    gem "jasmine-fixtures-generator", :group => :test
 
 ## Usage
 
