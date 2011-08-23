@@ -1,5 +1,3 @@
-require 'jasmine_fixtures'
-
 module Jasmine
   module Fixtures
     module Generator
@@ -7,3 +5,5 @@ module Jasmine
     end
   end
 end
+
+require 'jasmine/fixtures/helper_methods'
