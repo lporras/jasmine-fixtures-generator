@@ -1,5 +1,4 @@
 require 'test_helper'
-require 'jasmine_fixtures'
 
 class FixtureHelperMethodsTest < ActiveSupport::TestCase
 

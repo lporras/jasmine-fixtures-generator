@@ -1,3 +1,5 @@
+require 'jasmine_fixtures'
+
 module Jasmine
   module Fixtures
     module Generator
