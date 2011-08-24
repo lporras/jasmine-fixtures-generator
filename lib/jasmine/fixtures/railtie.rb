@@ -1,5 +1,3 @@
-require 'rails'
-
 module Jasmine
   module Fixtures
     class Railtie < Rails::Railtie

@@ -1,4 +1,5 @@
 require 'rake/testtask'
+include Rake::DSL if defined?(Rake::DSL)
 
 namespace :test do
 
