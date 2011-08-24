@@ -7,4 +7,4 @@ module Jasmine
 end
 
 require 'jasmine/fixtures/helper_methods'
-require 'jasmine/fixtures/railtie' if defined?(Rails) && Rails::VERSION::MAJOR >= 3
+require 'jasmine/fixtures/railtie'
